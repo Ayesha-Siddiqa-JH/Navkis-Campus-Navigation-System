@@ -28,10 +28,10 @@ A **web-based navigation system** designed for **Navkis College of Engineering**
 ![Login Page](login.png)  
 
 ### 🗺️ Main Page Interface  
-![Main Page](main page.png)  
+![Main Page](main_page.png)  
 
 ### 📍 Map Location  
-![Map Location](map location.png)  
+![Map Location](map_location.png)  
 
 ---
 
