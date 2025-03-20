@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    /* General Styles */
+    html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: url('https://img.freepik.com/free-photo/hand-painted-watercolor-ink-background_1409-1554.jpg?t=st=1732900278~exp=1732903878~hmac=5ed11b5ff530b750c241ccaa04e412642152b27d75e8251a24f6ba6322b512b9&w=1060') no-repeat center center/cover;
+      height: 100%;
+      width: 100%;
+    }
+
+    body {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+
+    /* Login Box */
+    .login-container {
+      background: #fff;
+      width: calc(100% - 10rem);
+      max-width: 300px;
+      padding: 30px;
+      /* Increased padding */
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      /* Enhanced shadow */
+      text-align: center;
+    }
+
+    /* Welcome Heading */
+    .login-container h1 {
+      font-size: 28px;
+      /* Larger font size */
+      margin-bottom: 5px;
+      color: #007BFF;
+      /* Blue color */
+    }
+
+    /* Subheading */
+    .login-container h2 {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: #555;
+      /* Subtle gray */
+    }
+
+    /* Input Fields */
+    .input-container {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .input-container label {
+      display: block;
+      font-weight: bold;
+      text-align: left;
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+
+    .input-container .input-box {
+      display: flex;
+      align-items: center;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      padding: 10px;
+      /* Increased padding for a better feel */
+    }
+
+    .input-container .input-box i {
+      color: #007BFF;
+      padding: 5px;
+      font-size: 18px;
+      /* Slightly larger icon size */
+      margin-right: 10px;
+    }
+
+    .input-container input {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+      outline: none;
+      background-color: transparent;
+    }
+
+    /* Login Button */
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      background: #007BFF;
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .login-container button:hover {
+      background: #0056b3;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .login-container {
+        padding: 20px;
+      }
+
+      .login-container h1 {
+        font-size: 24px;
+      }
+
+      .login-container h2 {
+        font-size: 16px;
+      }
+
+      .input-container input {
+        font-size: 16px;
+      }
+
+      .login-container button {
+        padding: 10px;
+        font-size: 14px;
+      }
+    }
+
+    /* Very Small Screens */
+    @media (max-width: 480px) {
+      .login-container h1 {
+        font-size: 22px;
+      }
+
+      .login-container h2 {
+        font-size: 14px;
+      }
+
+      .input-container input {
+        font-size: 14px;
+      }
+
+      .login-container button {
+        padding: 8px;
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login-container">
+    <!-- Welcome and Login Headings -->
+    <h1>Welcome</h1>
+    <h2>Login to continue</h2>
+
+    <form id="loginForm">
+      <!-- Email Field -->
+      <div class="input-container">
+        <label for="email">Email</label>
+        <div class="input-box">
+          <i class="fa fa-envelope"></i>
+          <input id="email" type="email" placeholder="Email Address" required>
+        </div>
+      </div>
+      <!-- Password Field -->
+      <div class="input-container">
+        <label for="password">Password</label>
+        <div class="input-box">
+          <i class="fa fa-lock"></i>
+          <input id="password" type="password" placeholder="Password" required>
+        </div>
+      </div>
+      <!-- Login Button -->
+      <button type="submit">Login</button>
+    </form>
+  </div>
+  <!-- Font Awesome for Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Fetch the email and password entered by the user
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      // Perform a simple validation (you can add more advanced checks or server-side logic)
+      if (email === "navkis@email.com" && password === "12345") {
+        // Redirect to categories.html if credentials are correct
+        window.location.href = "categories.html";
+      } else {
+        // Show an alert if the credentials are incorrect
+        alert("Invalid email or password. Please try again.");
+      }
+    });
+  </script>
+</body>
+
+</html>
